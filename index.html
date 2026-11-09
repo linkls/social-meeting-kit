@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>会上发言应急包 · 六个卡点十八句现成接法</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+html,body{background:#F1EAE1}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+  color:#33403D;font-size:16px;line-height:1.72;-webkit-font-smoothing:antialiased}
+
+/* ---------- 布局 ---------- */
+.wrap{max-width:430px;margin:0 auto;background:#FAF7F2;min-height:100vh;box-shadow:0 0 60px rgba(80,90,84,.08)}
+@media(min-width:900px){
+  .wrap{max-width:1060px;display:flex;align-items:flex-start;background:#FAF7F2;padding:0}
+  .side{width:266px;flex:0 0 266px;position:sticky;top:0;height:100vh;overflow-y:auto;background:#F5EFE7;border-right:1px solid #EAE1D5;padding:26px 16px 40px}
+  .main{flex:1;min-width:0;padding:0 34px 70px}
+  .mobilenav{display:none}
+  .topbar{display:block !important}
+}
+.main{padding:0 20px 70px}
+.side{display:none}
+.mobilenav{display:block;position:sticky;top:0;z-index:30;background:rgba(250,247,242,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid #EFE8DF;padding:10px 0 9px}
+.mobilenav .mrow{display:flex;gap:7px;overflow-x:auto;padding:0 16px;-webkit-overflow-scrolling:touch}
+.mobilenav .mrow::-webkit-scrollbar{display:none}
+.mchip{flex:0 0 auto;white-space:nowrap;font-size:12px;font-weight:700;color:#6B7A76;border:1px solid #EAE1D5;
+  background:#fff;border-radius:999px;padding:5px 12px;text-decoration:none}
+.mchip.on{background:#4E8C84;border-color:#4E8C84;color:#fff}
+
+/* ---------- 通用 ---------- */
+.eyebrow{font-size:12px;letter-spacing:.18em;color:#9AA8A4;font-weight:600}
+.h1{font-size:28px;line-height:1.3;font-weight:800;letter-spacing:-.01em}
+.lede{color:#63736F;font-size:14.5px}
+.tag{display:inline-block;padding:4px 11px;border-radius:999px;font-size:12px;font-weight:700;background:#EAF3F0;color:#4E8C84}
+.tag.a{background:#FBEADC;color:#B46B3C}.tag.c{background:#ECE9F7;color:#6E65A8}
+.tag.d{background:#E3ECF5;color:#4B7196}
+.muted{color:#8C9A96;font-size:12.5px;line-height:1.8}
+.card{background:#fff;border-radius:22px;padding:20px 18px;box-shadow:0 6px 22px rgba(74,90,84,.07)}
+.rule{height:1px;background:#EFE8DF;margin:22px 0}
+.kicker{font-size:12px;letter-spacing:.16em;color:#9AA8A4;font-weight:700}
+
+/* ---------- 封面 ---------- */
+.cover{padding:40px 0 10px}
+.cover .h1{margin:12px 0 10px}
+.cover .lede{margin:0 0 16px}
+.cover .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.chip{background:#fff;border:1px solid #EEE5DA;border-radius:999px;padding:6px 13px;font-size:12.5px;color:#5C6B67;font-weight:600}
+.topbar{display:none}
+
+/* ---------- 目录（侧栏） ---------- */
+.side .st{font-size:12px;letter-spacing:.16em;color:#9AA8A4;font-weight:700;margin:0 6px 14px}
+.side .sp{font-size:12.5px;font-weight:800;color:#33403D;margin:20px 6px 8px;display:flex;align-items:center;gap:7px}
+.side .sp .n{width:20px;height:20px;border-radius:7px;background:#EDE5DA;color:#8C9A96;font-size:11px;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+.side a{list-style:none;text-decoration:none;display:flex;align-items:center;gap:8px;font-size:13px;color:#6B7A76;
+  padding:7px 10px;border-radius:10px;line-height:1.5}
+.side a:hover{background:#EFE7DC}
+.side a .st2{flex:0 0 auto;font-size:10px;font-weight:800;color:#fff;background:#71B0A4;border-radius:5px;padding:1px 5px}
+.side a .st3{flex:0 0 auto;font-size:10px;font-weight:700;color:#B0B8B4;border:1px solid #E3DCD2;border-radius:5px;padding:1px 5px}
+.side a.open{color:#33403D;font-weight:700;background:#fff;box-shadow:0 3px 10px rgba(74,90,84,.06)}
+
+/* ---------- 8 类人格 ---------- */
+.types{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+@media(min-width:900px){.types{grid-template-columns:repeat(4,1fr)}}
+.tcard{background:#fff;border-radius:16px;padding:13px 13px;box-shadow:0 4px 14px rgba(74,90,84,.06);border-left:3px solid #71B0A4}
+.tcard.b1{border-left-color:#E9A178}.tcard.b2{border-left-color:#8E86C4}.tcard.b3{border-left-color:#5B7FA6}.tcard.b4{border-left-color:#C9A15E}
+.tcard .tn{font-size:14px;font-weight:800;line-height:1.4}
+.tcard .td{font-size:12px;color:#8C9A96;margin-top:5px;line-height:1.65}
+
+/* ---------- 速查表 ---------- */
+.qtwrap{background:#fff;border-radius:22px;padding:16px 12px 12px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-top:14px}
+.qt{width:100%;border-collapse:collapse;table-layout:fixed}
+.qt th,.qt td{border-bottom:1px dashed #EFE8DF;padding:9px 7px;vertical-align:top;text-align:left;font-size:11.5px;line-height:1.6}
+.qt th{font-size:11.5px;color:#8C9A96;font-weight:800}
+.qt tr:last-child td{border-bottom:0}
+.qt .pn{font-weight:800;color:#33403D;font-size:12px}
+.qt .sg{color:#8C9A96}
+.qt .ans{color:#4B5C58;font-weight:600}
+.qt th:nth-child(1),.qt td:nth-child(1){width:74px}
+.qt th:nth-child(2),.qt td:nth-child(2){width:82px}
+
+/* ---------- 章节 ---------- */
+.part{margin:38px 0 0}
+.part-h{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.part-h .pn{width:30px;height:30px;border-radius:10px;background:#4E8C84;color:#fff;font-size:13px;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+.part-h .pt{font-size:18px;font-weight:800}
+.part-sub{color:#9AA8A4;font-size:12.5px;margin:0 0 16px 40px}
+.ch{background:#fff;border-radius:24px;padding:22px 18px;box-shadow:0 8px 26px rgba(74,90,84,.08);margin-bottom:16px;scroll-margin-top:64px}
+.ch .ck{font-size:11.5px;letter-spacing:.1em;color:#B0895F;font-weight:800}
+.ch .ct{font-size:21px;font-weight:800;line-height:1.4;margin:7px 0 4px}
+.ch .cs{font-size:13px;color:#9AA8A4;margin-bottom:6px}
+.blk{margin-top:18px;padding-top:16px;border-top:1px dashed #EFE8DF}
+.blk:first-of-type{border-top:0;padding-top:4px}
+.lbl{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:800;margin-bottom:11px}
+.lbl .n{width:22px;height:22px;border-radius:8px;background:#EAF3F0;color:#4E8C84;font-size:12px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.blk p{font-size:14.5px;line-height:1.78;color:#4B5C58;margin-bottom:9px}
+.blk p:last-child{margin-bottom:0}
+.blk ul{list-style:none}
+.blk li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.75;color:#4B5C58;padding:5px 0}
+.blk li .d{flex:0 0 6px;width:6px;height:6px;border-radius:50%;background:#9CC4BC;margin-top:11px}
+.blk li b{color:#33403D}
+.say{display:flex;gap:12px;align-items:flex-start;background:#FAF7F2;border:1px solid #EFE7DC;border-radius:16px;padding:14px 15px;margin-bottom:10px}
+.say .sn{flex:0 0 auto;width:22px;height:22px;border-radius:8px;background:#71B0A4;color:#fff;font-size:12px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;margin-top:3px}
+.say .st{flex:1}
+.say .st .sh{font-size:12px;font-weight:800;color:#B0895F;margin-bottom:4px;letter-spacing:.02em}
+.say .st .sq{font-size:15px;line-height:1.78;color:#33403D}
+.say .st .sn2{font-size:12.5px;color:#9AA8A4;margin-top:6px}
+.say.b2 .sn{background:#E9A178}.say.b3 .sn{background:#8E86C4}
+.prac{background:#EAF4F1;border-radius:18px;padding:16px 15px;margin-top:16px}
+.prac .lbl .n{background:#4E8C84;color:#fff}
+.prac li .d{background:#71B0A4}
+.prac .lbl{color:#2F5F59}
+.prac p,.prac li{color:#3B5B57}
+.next{margin-top:14px;background:#FBEADC;border-radius:16px;padding:14px 15px}
+.next .lbl .n{background:#E9A178;color:#fff}
+.next .lbl{color:#8A5A2E}
+.next p{color:#6B4B2C}
+.chfoot{display:flex;gap:10px;margin-top:16px}
+.chfoot .rbtn{flex:1;text-align:center;padding:12px;border:0;border-radius:14px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;
+  background:#fff;border:1px solid #E9E1D6;color:#6B7A76;text-decoration:none}
+
+.tbd{background:#FBF7F0;border:1px dashed #E3DCD2;border-radius:20px;padding:20px 18px;margin-bottom:14px}
+.tbd .tt{font-size:16px;font-weight:800;color:#8C9A96}
+.tbd .td{font-size:13px;color:#A5AFA9;margin-top:7px;line-height:1.75}
+.tbd .td b{color:#7C8B87}
+
+.foot{text-align:center;color:#B0B8B4;font-size:11.5px;line-height:1.9;margin-top:34px;padding-top:20px;border-top:1px dashed #EFE8DF}
+.toast{position:fixed;left:50%;bottom:40px;transform:translateX(-50%) translateY(20px);background:rgba(40,52,49,.93);
+  color:#fff;padding:11px 20px;border-radius:14px;font-size:14px;opacity:0;pointer-events:none;transition:all .28s ease;z-index:99}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ---------- 产品16 追加 ---------- */
+.disc{background:#F7F3EC;border-radius:16px;padding:13px 14px;margin-top:18px;font-size:12.5px;line-height:1.8;color:#7C8A86}
+.disc b{color:#54635F}
+.main p{line-height:1.9}
+.ch .blk p{line-height:1.95}
+.chq{margin-top:18px;padding-top:16px;border-top:1px dashed #EFE8DF}
+.chq .qtcap{margin:0 0 8px}
+.chq .qtcap .t{font-size:14px}
+.chq .qtwrap{padding:12px 10px 10px;box-shadow:none;border:1px solid #EFE7DC;border-radius:18px;margin-top:0}
+.toast{position:fixed;left:50%;bottom:40px;transform:translateX(-50%) translateY(20px);background:rgba(40,52,49,.93);color:#fff;padding:10px 16px;border-radius:12px;font-size:12.5px;opacity:0;transition:.22s;pointer-events:none;z-index:99;max-width:82vw;text-align:center}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+/* 十八句：可复制句子卡 */
+.qcard{background:#fff;border-radius:20px;padding:16px 16px 14px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-top:12px}
+.qcard .qh{display:flex;gap:9px;align-items:flex-start}
+.qcard .qn{width:26px;height:26px;flex:0 0 26px;border-radius:9px;background:#EAF3F0;color:#4E8C84;font-size:12.5px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.qcard .qt{font-size:14.5px;font-weight:800;color:#33403D;line-height:1.6}
+.qcard .qm{font-size:12.6px;line-height:1.85;color:#6E7D79;margin-top:8px}
+.qcard .qm b{color:#4B5C58}
+.qlines{margin-top:10px}
+.ql{display:flex;gap:9px;align-items:flex-start;background:#FAF6F0;border-radius:12px;padding:10px 11px;margin-top:8px;border:1px dashed #E7DFD3}
+.ql .t{flex:1;font-size:12.8px;line-height:1.8;color:#4B5C58}
+.ql .t b{display:block;font-size:11px;color:#9AA7A3;font-weight:800;margin-bottom:2px}
+.ql .cp{flex:0 0 auto;font-size:11.5px;font-weight:800;color:#4E8C84;background:#EAF3F0;border-radius:9px;padding:4px 8px;margin-top:2px}
+.ql:active{background:#F2ECE2}
+/* 补充类（不计入十八句） */
+.qsup{background:#F7F3EC;border-radius:12px;padding:10px 12px;margin-top:8px;border:1px dashed #E4DCD0}
+.qsup .t{font-size:12.6px;line-height:1.8;color:#6E7D79}
+.qsup .t b{display:block;font-size:11px;color:#A79E8F;font-weight:800;margin-bottom:2px}
+/* 清单 */
+.chk{background:#fff;border-radius:20px;padding:16px 16px 8px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-top:12px}
+.chk li{list-style:none;font-size:13px;line-height:1.85;color:#54635F;padding:6px 0;border-bottom:1px dashed #F0EAE1;display:flex;gap:9px}
+.chk li:last-child{border-bottom:none}
+.chk .bx{flex:0 0 15px;width:15px;height:15px;border-radius:4px;border:1.5px solid #C9D8D4;margin-top:5px}
+/* 小测 */
+.bars{background:#fff;border-radius:20px;padding:16px 16px 18px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-top:14px}
+.bars .bt{font-size:13px;font-weight:800;color:#33403D;margin-bottom:14px}
+.barrow{margin-bottom:12px}
+.barrow .bl{display:flex;justify-content:space-between;font-size:12.5px;color:#54635F;font-weight:700;margin-bottom:6px}
+.barrow .bl span:last-child{color:#4E8C84;font-weight:800}
+.bar{height:9px;border-radius:99px;background:#EBE3D9;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8FC7BC,#E9A178)}
+.scorebar{height:7px;border-radius:99px;background:#EBE3D9;overflow:hidden;margin:14px 0 6px}
+.scorebar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8FC7BC,#E9A178)}
+.scoretxt{font-size:12px;color:#8C9A96;font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+<aside class="side">
+<div class="st">CONTENTS</div>
+<div class="sp"><span class="n">1</span>开场与接住</div>
+<a href="#c1" data-t="c1"><span class="st2">本期</span>01 临时被点名怎么开头</a>
+<a href="#t2" data-t="t2"><span class="st3">框架</span>02 没说准备怎么接</a>
+<a href="#t3" data-t="t3"><span class="st3">框架</span>03 被打断怎么续上</a>
+<div class="sp"><span class="n">2</span>压力与质疑</div>
+<a href="#c4" data-t="c4"><span class="st2">本期</span>04 被质疑怎么回</a>
+<a href="#t5" data-t="t5"><span class="st3">框架</span>05 数据被追问怎么接</a>
+<a href="#t6" data-t="t6"><span class="st3">框架</span>06 被当众否定怎么收</a>
+<div class="sp"><span class="n">3</span>表态与边界</div>
+<a href="#t7" data-t="t7"><span class="st3">框架</span>07 被要求当场表态</a>
+<a href="#t8" data-t="t8"><span class="st3">框架</span>08 不想承诺时间怎么挡</a>
+<a href="#c9" data-t="c9"><span class="st2">本期</span>09 别人替你说了一句你不想说的</a>
+<div class="sp"><span class="n">4</span>收尾与复盘</div>
+<a href="#t10" data-t="t10"><span class="st3">框架</span>10 想反驳又怕伤人</a>
+<a href="#t11" data-t="t11"><span class="st3">框架</span>11 发言超时怎么收</a>
+<a href="#t12" data-t="t12"><span class="st3">框架</span>12 散会后怎么补一句</a>
+<div class="sp"><span class="n">★</span>速查与自测</div>
+<a href="#kit" data-t="kit">十八句现成接法</a>
+<a href="#quick" data-t="quick">30 秒速查表</a>
+<a href="#prep" data-t="prep">会议前 60 秒清单</a>
+<a href="#test" data-t="test">你在会上的发言卡在哪</a>
+<a href="#howto" data-t="howto">怎么用这本手册</a>
+</aside>
+  <div class="main">
+<div class="mobilenav"><div class="mrow">
+<a href="#top" class="mchip" data-c="top">封面</a>
+<a href="#kit" class="mchip" data-c="kit">十八句</a>
+<a href="#quick" class="mchip" data-c="quick">速查</a>
+<a href="#c1" class="mchip" data-c="c1">01 开场</a>
+<a href="#c4" class="mchip" data-c="c4">04 质疑</a>
+<a href="#c9" class="mchip" data-c="c9">09 纠正</a>
+<a href="#prep" class="mchip" data-c="prep">清单</a>
+<a href="#test" class="mchip" data-c="test">小测</a>
+</div></div>
+    <section class="cover" id="top">
+      <div class="eyebrow">MEETING KIT</div>
+      <h1 class="h1">会上发言应急包</h1>
+      <p class="lede">临时被点名、被质疑、被要求表态 —— 六个卡点，三档说法。<br>4 部分 12 节里先给你 3 节正文。</p>
+      <div class="chips">
+        <span class="chip">6 个卡点</span>
+        <span class="chip">十八句现成接法</span>
+        <span class="chip">4 部分 12 节</span>
+        <span class="chip">会议前 60 秒清单</span>
+      </div>
+    </section>
+
+    <div class="card">
+      <div class="kicker">怎么用这本手册</div>
+      <p>会上的难处往往不是不会说话，是<b>开口那一下没有准备</b>：被点名之前不知道要说什么，被点名之后才现想。</p>
+      <p>这本手册把会上发言拆成 4 部分共 <b>12 节</b>，本期开放 <b>3 节正文</b>（01 临时被点名怎么开头 / 04 被质疑怎么回 / 09 别人替你说了一句你不想说的），其余章节目录已列出，正文待后续展开。</p>
+      <div class="rule"></div>
+      <p class="muted">另附 <b>十八句现成接法</b>：六个卡点，每个卡点三档说法（直接版 / 留台阶版 / 轻松版），点一下就复制；一张 30 秒速查表；一页会议前 60 秒清单；4 题「你在会上的发言卡在哪」小测。本资料为沟通参考，不构成专业心理评估、诊断或医疗建议；话术是参考句不是标准答案，请按你面对的人和场合调整。</p>
+    </div>
+
+    <section id="kit">
+      <h2>十八句现成接法</h2>
+      <p class="muted">六个卡点，每个卡点三档说法，一共十八句。点一下句子就复制，可以直接粘到会议纪要或聊天框里。</p>
+<div class="qcard">
+<div class="qh"><div class="qn">1</div><div class="qt">临时被点名怎么开头</div></div>
+<div class="qm"><b>什么时候用：</b>会上没有人提前通知你，主持人直接点了你的名字。<br><b>补一个动作：</b>开口先给结论，别先铺背景</div>
+<div class="qlines">
+<div class="ql" data-copy="这个我说两句。我的结论是先不动：现在拿到的数据只覆盖了一半，补齐再动，代价是多两周。"><div class="t"><b>直接版</b>这个我说两句。我的结论是先不动：现在拿到的数据只覆盖了一半，补齐再动，代价是多两周。</div><div class="cp">拷贝</div></div>
+<div class="ql" data-copy="我先说个不完整的想法：这套方案在头部客户那边可能行，长尾客户会被成本卡住。要不拆成一个试点版加一个常规版，两周后看对比。"><div class="t"><b>留台阶版</b>我先说个不完整的想法：这套方案在头部客户那边可能行，长尾客户会被成本卡住。要不拆成一个试点版加一个常规版，两周后看对比。</div><div class="cp">拷贝</div></div>
+<div class="ql" data-copy="我插一句，这个不一定对：这两件事能不能拆开做？拆开的话今天就能先动一件。"><div class="t"><b>轻松版</b>我插一句，这个不一定对：这两件事能不能拆开做？拆开的话今天就能先动一件。</div><div class="cp">拷贝</div></div>
+</div></div>
+<div class="qcard">
+<div class="qh"><div class="qn">2</div><div class="qt">没准备怎么接</div></div>
+<div class="qm"><b>什么时候用：</b>问题超出了你准备的范围，对方在等你回答。<br><b>补一个动作：</b>给一个明确的时间点，别停在「我回头看看」</div>
+<div class="qlines">
+<div class="ql" data-copy="这块我还没细看，不敢瞎说。给我半天，我把材料核完给你一个准数。"><div class="t"><b>直接版</b>这块我还没细看，不敢瞎说。给我半天，我把材料核完给你一个准数。</div><div class="cp">拷贝</div></div>
+<div class="ql" data-copy="我先说我知道的部分，剩下的不敢当众下结论。散会后我整理一份发到群里，大家先按现有信息讨论。"><div class="t"><b>留台阶版</b>我先说我知道的部分，剩下的不敢当众下结论。散会后我整理一份发到群里，大家先按现有信息讨论。</div><div class="cp">拷贝</div></div>
+<div class="ql" data-copy="这个我先接一下，给个方向：应该卡在流程上，具体卡在哪一步我回头确认。"><div class="t"><b>轻松版</b>这个我先接一下，给个方向：应该卡在流程上，具体卡在哪一步我回头确认。</div><div class="cp">拷贝</div></div>
+</div></div>
+<div class="qcard">
+<div class="qh"><div class="qn">3</div><div class="qt">被质疑怎么回</div></div>
+<div class="qm"><b>什么时候用：</b>你的说法被当场挑战，对方当着所有人问你这句凭什么。<br><b>补一个动作：</b>先认下质疑，再摆依据，别先杠回去</div>
+<div class="qlines">
+<div class="ql" data-copy="你这个质疑是对的，我刚那句说快了。准确讲，我们只验证过两种情况。"><div class="t"><b>直接版</b>你这个质疑是对的，我刚那句说快了。准确讲，我们只验证过两种情况。</div><div class="cp">拷贝</div></div>
+<div class="ql" data-copy="我理解你在担心什么，先接住这个担心：确实有风险。可以先小范围跑一轮，看数据再决定要不要全量。"><div class="t"><b>留台阶版</b>我理解你在担心什么，先接住这个担心：确实有风险。可以先小范围跑一轮，看数据再决定要不要全量。</div><div class="cp">拷贝</div></div>
+<div class="ql" data-copy="等一下，这句得说清楚，刚才是我表述有误，我重来一遍。"><div class="t"><b>轻松版</b>等一下，这句得说清楚，刚才是我表述有误，我重来一遍。</div><div class="cp">拷贝</div></div>
+</div></div>
+<div class="qcard">
+<div class="qh"><div class="qn">4</div><div class="qt">被要求当场表态</div></div>
+<div class="qm"><b>什么时候用：</b>会议停在某件事上，所有人都在等你一句话。<br><b>补一个动作：</b>表态带上条件，别把话说到没有退路</div>
+<div class="qlines">
+<div class="ql" data-copy="我给个明确态度：这件事我不反对。但我需要两个前提——预算时间和人手。"><div class="t"><b>直接版</b>我给个明确态度：这件事我不反对。但我需要两个前提——预算时间和人手。</div><div class="cp">拷贝</div></div>
+<div class="ql" data-copy="我先说倾向：偏支持。只是有一个前提想先确认，条件成立我这边没问题。"><div class="t"><b>留台阶版</b>我先说倾向：偏支持。只是有一个前提想先确认，条件成立我这边没问题。</div><div class="cp">拷贝</div></div>
+<div class="ql" data-copy="当场拍板有点快，我给个方向性的：方向上支持，细节保留意见，散会前给你结论。"><div class="t"><b>轻松版</b>当场拍板有点快，我给个方向性的：方向上支持，细节保留意见，散会前给你结论。</div><div class="cp">拷贝</div></div>
+</div></div>
+<div class="qcard">
+<div class="qh"><div class="qn">5</div><div class="qt">别人替你说了一句你不想说的</div></div>
+<div class="qm"><b>什么时候用：</b>有人替你总结了一句听起来更漂亮、但不是你的意思的话。<br><b>补一个动作：</b>当场纠正，别等散会以后再解释</div>
+<div class="qlines">
+<div class="ql" data-copy="先纠正一句，那不是我刚才的意思。我想说的是这个方案要改一处，不是要推翻。"><div class="t"><b>直接版</b>先纠正一句，那不是我刚才的意思。我想说的是这个方案要改一处，不是要推翻。</div><div class="cp">拷贝</div></div>
+<div class="ql" data-copy="我补一句，可能有点出入。我想说的是节奏要放慢，不是这件事不行。"><div class="t"><b>留台阶版</b>我补一句，可能有点出入。我想说的是节奏要放慢，不是这件事不行。</div><div class="cp">拷贝</div></div>
+<div class="ql" data-copy="哎哎哎，这句我得拦一下——刚那句我自己没那么说过，让我自己说一遍。"><div class="t"><b>轻松版</b>哎哎哎，这句我得拦一下——刚那句我自己没那么说过，让我自己说一遍。</div><div class="cp">拷贝</div></div>
+</div></div>
+<div class="qcard">
+<div class="qh"><div class="qn">6</div><div class="qt">想反驳又怕伤人</div></div>
+<div class="qm"><b>什么时候用：</b>你有一个不同意见，但当着这么多人怕对方下不来台。<br><b>补一个动作：</b>先给依据再给结论，让分歧落在事情上</div>
+<div class="qlines">
+<div class="ql" data-copy="我补一个不同的看法：这三条里第二条跟我们的复用逻辑冲突，改起来的成本比看起来大。"><div class="t"><b>直接版</b>我补一个不同的看法：这三条里第二条跟我们的复用逻辑冲突，改起来的成本比看起来大。</div><div class="cp">拷贝</div></div>
+<div class="ql" data-copy="我先说我的担心，怕跑题：这个方案对高活跃用户有效，对沉默用户反而更差。"><div class="t"><b>留台阶版</b>我先说我的担心，怕跑题：这个方案对高活跃用户有效，对沉默用户反而更差。</div><div class="cp">拷贝</div></div>
+<div class="ql" data-copy="我插一句，可能跟主流意见不一样，但我觉得值得说一句。"><div class="t"><b>轻松版</b>我插一句，可能跟主流意见不一样，但我觉得值得说一句。</div><div class="cp">拷贝</div></div>
+</div></div>
+    </section>
+
+    <section id="quick">
+      <h2>30 秒速查表</h2>
+      <p class="muted">来不及翻上面时看这张表：认出卡点 → 一句话怎么说 → 补一个动作。</p>
+      <div class="qtwrap">
+        <table class="qt">
+          <thead><tr><th>卡点</th><th>什么时候用</th><th>一句话怎么说</th><th>补一个动作</th></tr></thead>
+          <tbody>
+<tr><td class="pn">临时被点名</td><td class="sg">会上突然被叫到</td><td class="ans">我先说结论</td><td class="sg">先给结论再补依据</td></tr>
+<tr><td class="pn">没准备</td><td class="sg">问题超出准备范围</td><td class="ans">这块我还没细看</td><td class="sg">给一个明确时间点</td></tr>
+<tr><td class="pn">被质疑</td><td class="sg">说法被当场挑战</td><td class="ans">你这个质疑是对的</td><td class="sg">先认再补，别先杠</td></tr>
+<tr><td class="pn">被要求表态</td><td class="sg">所有人等你一句话</td><td class="ans">我不反对，但需要两个前提</td><td class="sg">表态带上条件</td></tr>
+<tr><td class="pn">被替你说</td><td class="sg">有人替你总结</td><td class="ans">那不是我刚才的意思</td><td class="sg">当场纠正，别过夜</td></tr>
+<tr><td class="pn">想反驳</td><td class="sg">有意见怕伤人</td><td class="ans">我补一个不同的看法</td><td class="sg">先给依据再给结论</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="part">
+      <div class="part-h"><span class="pn">1</span><span class="pt">开场与接住</span></div>
+      <p class="part-sub">对应场景：临时被点名 · 没准备怎么接 · 被打断怎么续上</p>
+<article class="ch" id="c1">
+<div class="ck">第 01 节 · 本期正文</div>
+<h2 class="ct">临时被点名怎么开头</h2>
+<p class="cs">被点名的那一刻，你只有十来秒决定开场那一句说什么。那一句决定的是别人听你后面的话，还是等你说完。</p>
+<div class="blk"><div class="lbl"><span class="n">1</span>场景</div>
+<p>周会上你一直在记笔记，主持人忽然说：「这个你来说说看。」会议室安静下来，你手边只有半页没写的笔记。</p>
+<p>临时被点名的难处不在于没准备，而在于你会本能地想补背景、把话拉长，好让自己多出几秒。恰恰相反，越往后铺，对方越没耐心听。</p>
+</div>
+<div class="blk"><div class="lbl"><span class="n">2</span>先判断什么</div><ul>
+<li><span class="d"></span><span><b>这个问题有没有结论？</b>有结论就开场给结论，没结论就开场给方向，不要一开口就说「我先说一下背景」。</span></li>
+<li><span class="d"></span><span><b>你手上有什么？</b>哪怕只有半页笔记、一条线上数据、一个别人的结论，都比空手开场强。</span></li>
+<li><span class="d"></span><span><b>这句话是给谁听的？</b>对上级讲结论，对同事讲思路，对客户讲影响面——同一件事，落点不一样。</span></li>
+<li><span class="d"></span><span><b>你需要多久才说得清？</b>超过两句话还理不清，就明说需要时间，别在现场硬凑。</span></li>
+</ul></div>
+<div class="blk"><div class="lbl"><span class="n">3</span>三种具体说法</div>
+<div class="say b1"><div class="sn">1</div><div class="st"><div class="sh">直接版</div><div class="sq">「这个我说两句。我的结论是先不动：现在拿到的数据只覆盖了一半，补齐再动，代价是多两周。」</div><div class="sn2">适用：你已经有判断，直接给结论，对方接得住。</div></div></div>
+<div class="say b2"><div class="sn">2</div><div class="st"><div class="sh">留台阶版</div><div class="sq">「我先说个不完整的想法：这套方案在头部客户那边可能行，长尾客户会被成本卡住。要不拆成一个试点版加一个常规版，两周后看对比。」</div><div class="sn2">适用：你没有把握全盘否定，用两版方案把选择权交回去。</div></div></div>
+<div class="say b3"><div class="sn">3</div><div class="st"><div class="sh">轻松版</div><div class="sq">「我插一句，这个不一定对：这两件事能不能拆开做？拆开的话今天就能先动一件。」</div><div class="sn2">适用：气氛偏松、对方不指望你有完整答案。</div></div></div>
+</div>
+<div class="blk"><div class="lbl"><span class="n">4</span>对方继续追问怎么回</div><ul>
+<li><span class="d"></span><span><b>「你连这个都没准备？」</b>→ 「准备了一部分，框架有，细节我散会前补。刚才那句结论我先说，剩下的是细节问题。」</span></li>
+<li><span class="d"></span><span><b>「那你说个大概方向。」</b>→ 「大概方向是这样：先做减法，把两件能并行的事并成一件。展开要三分钟，我说完再听大家的。」</span></li>
+<li><span class="d"></span><span><b>「这个数据是哪来的？」</b>→ 「数据在这儿，我先说口径和取数时间，再讲结论。」</span></li>
+</ul></div>
+<div class="blk"><div class="lbl"><span class="n">5</span>今天能完成的小练习</div><div class="prac"><ul>
+<li><span class="d"></span><span>把你今天可能会被点到的那个问题，写成不超过二十字的开场那一句。</span></li>
+<li><span class="d"></span><span>再写一个版本，把选择权交回给对方（两版方案那种）。</span></li>
+<li><span class="d"></span><span>对着手机说一遍，录下来听，听有没有「嗯……那个……」这类填充词。</span></li>
+</ul></div></div>
+<div class="chq">
+<div class="qtcap"><div class="t">本节速查表</div><div class="b">来不及读整节时看这三行</div></div>
+<div class="qtwrap"><table class="qt">
+<thead><tr><th>什么时候</th><th>场景</th><th>一句话怎么说</th><th>补一个动作</th></tr></thead>
+<tbody>
+<tr><td class="pn">主持人直接点你</td><td class="sg">手上只有半页笔记</td><td class="ans">我先说结论：这件事我建议……</td><td class="sg">开场就给判断</td></tr>
+<tr><td class="pn">问题太大没底</td><td class="sg">不掌握全部信息</td><td class="ans">我先说个不完整的想法</td><td class="sg">给两版方案</td></tr>
+<tr><td class="pn">气氛偏松</td><td class="sg">对方不指望完整答案</td><td class="ans">我插一句，这个不一定对</td><td class="sg">抛出去让大家接</td></tr>
+</tbody></table></div>
+</div>
+<div class="chfoot"><a class="rbtn" href="#kit">回到十八句现成接法</a></div>
+</article>
+<div class="tbd" id="t2">
+<div class="tt">02 没说准备怎么接</div>
+<div class="td">识别信号：主持人问到一个你没准备过的问题，你开始绕圈子<br>改法：先说没准备，再说你能确认的部分，再给一个补交时间<br>记住一句：<b>不确定的时候说实话，比硬撑一句更省事。</b> 本节正文待展开。</div>
+</div>
+<div class="tbd" id="t3">
+<div class="tt">03 被打断怎么续上</div>
+<div class="td">识别信号：你说到一半被人插话，话头被带走，你干脆放弃了<br>改法：用一个固定的接回句把话拿回来，比如「我把这句说完，马上就到你」<br>记住一句：<b>被打断不是失败，续不上才是。</b> 本节正文待展开。</div>
+</div>
+    </div>
+
+    <div class="part">
+      <div class="part-h"><span class="pn">2</span><span class="pt">压力与质疑</span></div>
+      <p class="part-sub">对应场景：被质疑怎么回 · 数据被追问 · 被当众否定</p>
+<article class="ch" id="c4">
+<div class="ck">第 04 节 · 本期正文</div>
+<h2 class="ct">被质疑怎么回</h2>
+<p class="cs">被质疑不是失败，是这段发言真正开始被听进去的信号。回应的顺序有讲究：先接住，再补充，别急着反驳。</p>
+<div class="blk"><div class="lbl"><span class="n">1</span>场景</div>
+<p>你刚说完一个方案，有人直接问：「这个结论依据是什么？」后面还有人在点头附和，那句质疑显然不是随口一问。</p>
+<p>多数人接到质疑时的本能是加速解释，越说越快，越说越多。这时候听的人接收到的不是信息，是心虚。所以回应质疑的顺序是：先接住，再补充，收尾才给结论。</p>
+</div>
+<div class="blk"><div class="lbl"><span class="n">2</span>先判断什么</div><ul>
+<li><span class="d"></span><span><b>质疑的是哪一点？</b>是数据、逻辑还是立场？先判断出这一点，只回应这一点，其余的先放着。</span></li>
+<li><span class="d"></span><span><b>对方的身份是谁？</b>同事提问可以并肩讨论，领导提问要给出确定性，客户提问要给可验证的路径。</span></li>
+<li><span class="d"></span><span><b>你手上有没有能当场摆出来的东西？</b>有一条口径、一个截图、一个时间点，就能把讨论从情绪转回事实。</span></li>
+<li><span class="d"></span><span><b>这个质疑值不值得当场接？</b>接得住就当场接；接不住就明确说「这一条我回去核，明天给数」。</span></li>
+</ul></div>
+<div class="blk"><div class="lbl"><span class="n">3</span>三种具体说法</div>
+<div class="say b1"><div class="sn">1</div><div class="st"><div class="sh">直接版</div><div class="sq">「你这个质疑是对的，我刚那句说快了。准确讲，我们只验证过两种情况。」</div><div class="sn2">适用：对方说到了点子上，先认一句，再把范围收窄。</div></div></div>
+<div class="say b2"><div class="sn">2</div><div class="st"><div class="sh">留台阶版</div><div class="sq">「我理解你在担心什么，先接住这个担心：确实有风险。可以先小范围跑一轮，看数据再决定要不要全量。」</div><div class="sn2">适用：质疑带着情绪，先接情绪再谈办法。</div></div></div>
+<div class="say b3"><div class="sn">3</div><div class="st"><div class="sh">轻松版</div><div class="sq">「等一下，这句得说清楚，刚才是我表述有误，我重来一遍。」</div><div class="sn2">适用：确实是自己说漏了嘴，快速纠正比硬撑好。</div></div></div>
+</div>
+<div class="blk"><div class="lbl"><span class="n">4</span>对方继续追问怎么回</div><ul>
+<li><span class="d"></span><span><b>「那你到底有没有验证过？」</b>→ 「验证过两种情况：量和规模。成本这一块还没跑，这也是我今天想请大家看的那部分。」</span></li>
+<li><span class="d"></span><span><b>「我觉得你这个方案根本行不通。」</b>→ 「你这个判断我记下了。我把我手上的依据说两句，你听听是不是同一个前提。」</span></li>
+<li><span class="d"></span><span><b>「那这事儿还做不做？」</b>→ 「做，但先按小范围跑一轮。跑完拿数据回来定要不要全量，比现在拍板稳。」</span></li>
+</ul></div>
+<div class="blk"><div class="lbl"><span class="n">5</span>今天能完成的小练习</div><div class="prac"><ul>
+<li><span class="d"></span><span>写下你前阵子一次被质疑时说的头三句话，看看是不是在解释而不是在回应。</span></li>
+<li><span class="d"></span><span>准备一句接住质疑的开头：先认、再补、后给结论。</span></li>
+<li><span class="d"></span><span>挑一个你常被追问的点，把口径和取数时间写在纸上，下次直接念。</span></li>
+</ul></div></div>
+<div class="chq">
+<div class="qtcap"><div class="t">本节速查表</div><div class="b">来不及读整节时看这三行</div></div>
+<div class="qtwrap"><table class="qt">
+<thead><tr><th>什么时候</th><th>场景</th><th>一句话怎么说</th><th>补一个动作</th></tr></thead>
+<tbody>
+<tr><td class="pn">当场质疑</td><td class="sg">对方说到了点子上</td><td class="ans">你这个质疑是对的</td><td class="sg">先认一句再收窄范围</td></tr>
+<tr><td class="pn">质疑带情绪</td><td class="sg">后面有人在附和</td><td class="ans">我理解你在担心什么</td><td class="sg">先接情绪再谈办法</td></tr>
+<tr><td class="pn">自己说漏了</td><td class="sg">确实表述有误</td><td class="ans">这句得说清楚，我重来一遍</td><td class="sg">快速纠正别硬撑</td></tr>
+</tbody></table></div>
+</div>
+<div class="chfoot"><a class="rbtn" href="#kit">回到十八句现成接法</a></div>
+</article>
+<div class="tbd" id="t5">
+<div class="tt">05 数据被追问怎么接</div>
+<div class="td">识别信号：有人追着问数字的来源、口径、时间点<br>改法：来源、时间、口径三样先摆出来，再讲结论<br>记住一句：<b>数字的出处比数字本身更让人放心。</b> 本节正文待展开。</div>
+</div>
+<div class="tbd" id="t6">
+<div class="tt">06 被当众否定怎么收</div>
+<div class="td">识别信号：会上有人直接说你的方案不行，你一时不知道怎么接<br>改法：先认下对方关心的那一点，再把分歧落到一个可讨论的问题上<br>记住一句：<b>被否定的是方案，不是你这个人。</b> 本节正文待展开。</div>
+</div>
+    </div>
+
+    <div class="part">
+      <div class="part-h"><span class="pn">3</span><span class="pt">表态与边界</span></div>
+      <p class="part-sub">对应场景：被要求当场表态 · 不想承诺时间 · 别人替你说了一句</p>
+<div class="tbd" id="t7">
+<div class="tt">07 被要求当场表态</div>
+<div class="td">识别信号：会议停在某件事上，所有人都在等一句话<br>改法：表态可以给，但要带上前提和边界，必要时把话留到散会前<br>记住一句：<b>表态是给方向，不是替结果签字。</b> 本节正文待展开。</div>
+</div>
+<div class="tbd" id="t8">
+<div class="tt">08 不想承诺时间怎么挡</div>
+<div class="td">识别信号：你被追着要一个具体日期，而那个日期你给不了<br>改法：给条件式的时间，先说清楚什么条件成立你才能给日期<br>记住一句：<b>时间点要跟条件一起给，单独给就是空头。</b> 本节正文待展开。</div>
+</div>
+<article class="ch" id="c9">
+<div class="ck">第 09 节 · 本期正文</div>
+<h2 class="ct">别人替你说了一句你不想说的</h2>
+<p class="cs">有人替你总结，通常是好意。但被总结过的那句话如果比你的原意更满、更硬、更容易被人拿住，你要在场就纠正。</p>
+<div class="blk"><div class="lbl"><span class="n">1</span>场景</div>
+<p>你还在讲第二点，旁边的人插了一句：「他的意思就是这事不用做了，等下一轮。」全场点头，你听着压根不是这回事。</p>
+<p>这类情况容易两难：当众纠正像是不给面子，不纠正又等于默认。等散会再说，对方会照着这句话去执行，而且会说是你的意思。</p>
+</div>
+<div class="blk"><div class="lbl"><span class="n">2</span>先判断什么</div><ul>
+<li><span class="d"></span><span><b>他那句话偏到哪一边？</b>比你原意更满、还是更软？偏软可以顺，偏满必须纠正。</span></li>
+<li><span class="d"></span><span><b>现在纠正会不会打断对方？</b>在你还在发言时补一句更自然，不用道歉也不必解释太多。</span></li>
+<li><span class="d"></span><span><b>现场的人怎么理解这句话？</b>如果多数人已经点头了，纠正的优先级要提到很高。</span></li>
+<li><span class="d"></span><span><b>这件事有没有落到具体的人身上？</b>涉及承诺、时间、资源的，纠正一次不够，还要会后补一条。</span></li>
+</ul></div>
+<div class="blk"><div class="lbl"><span class="n">3</span>三种具体说法</div>
+<div class="say b1"><div class="sn">1</div><div class="st"><div class="sh">直接版</div><div class="sq">「先纠正一句，那不是我刚才的意思。我想说的是这个方案要改一处，不是要推翻。」</div><div class="sn2">适用：对方替你说了更满的话，当场收回。</div></div></div>
+<div class="say b2"><div class="sn">2</div><div class="st"><div class="sh">留台阶版</div><div class="sq">「我补一句，可能有点出入。我想说的是节奏要放慢，不是这件事不行。」</div><div class="sn2">适用：对方只是说得比你更满，用「有点出入」把话软着拉回来。</div></div></div>
+<div class="say b3"><div class="sn">3</div><div class="st"><div class="sh">轻松版</div><div class="sq">「哎哎哎，这句我得拦一下——刚那句我自己没那么说过，让我自己说一遍。」</div><div class="sn2">适用：气氛不僵，用轻松一点的方式把话拿回来。</div></div></div>
+</div>
+<div class="blk"><div class="lbl"><span class="n">4</span>对方继续追问怎么回</div><ul>
+<li><span class="d"></span><span><b>「我理解错了吗？」</b>→ 「理解得差不多，只是方向偏了一点。我刚才说的是改一处，不是推翻。」</span></li>
+<li><span class="d"></span><span><b>「那你刚才怎么不说清楚？」</b>→ 「是我没说清楚。现在补上：这事儿能做，但要改一处。」</span></li>
+<li><span class="d"></span><span><b>「都散会了还纠这个？」</b>→ 「因为这句话明天会被当成我的结论。改一处这句我得留下记录，散会后我发一条。」</span></li>
+</ul></div>
+<div class="blk"><div class="lbl"><span class="n">5</span>今天能完成的小练习</div><div class="prac"><ul>
+<li><span class="d"></span><span>写一句你能在自己发言中途插进去的纠正句，不超过二十字。</span></li>
+<li><span class="d"></span><span>想好你的版本里要留哪半句：留下你要做的部分，撤掉你不认的那部分。</span></li>
+<li><span class="d"></span><span>今天有人替你说的话，当场补一句。哪怕只是一句「我补一句」。</span></li>
+</ul></div></div>
+<div class="chq">
+<div class="qtcap"><div class="t">本节速查表</div><div class="b">来不及读整节时看这三行</div></div>
+<div class="qtwrap"><table class="qt">
+<thead><tr><th>什么时候</th><th>场景</th><th>一句话怎么说</th><th>补一个动作</th></tr></thead>
+<tbody>
+<tr><td class="pn">对方说得更满</td><td class="sg">全场已经点头</td><td class="ans">先纠正一句，那不是我刚才的意思</td><td class="sg">当场收回，别过夜</td></tr>
+<tr><td class="pn">对方说得更软</td><td class="sg">只是措辞不同</td><td class="ans">我补一句，可能有点出入</td><td class="sg">软着拉回来</td></tr>
+<tr><td class="pn">气氛不僵</td><td class="sg">只是插话打岔</td><td class="ans">这句我得拦一下</td><td class="sg">轻松拿回话头</td></tr>
+</tbody></table></div>
+</div>
+<div class="chfoot"><a class="rbtn" href="#kit">回到十八句现成接法</a></div>
+</article>
+    </div>
+
+    <div class="part">
+      <div class="part-h"><span class="pn">4</span><span class="pt">收尾与复盘</span></div>
+      <p class="part-sub">对应场景：想反驳又怕伤人 · 发言超时 · 散会后补一句</p>
+<div class="tbd" id="t10">
+<div class="tt">10 想反驳又怕伤人</div>
+<div class="td">识别信号：你有一句反对卡在喉咙里，到底咽了回去<br>改法：把反对说成一个待讨论的问题，先给依据再给结论<br>记住一句：<b>反对要落在依据上，不要落在人身上。</b> 本节正文待展开。</div>
+</div>
+<div class="tbd" id="t11">
+<div class="tt">11 发言超时怎么收</div>
+<div class="td">识别信号：你越说越多，听众开始看手机<br>改法：用一句总结收尾，把话停在自己手上<br>记住一句：<b>停下来的人显得更有把握。</b> 本节正文待展开。</div>
+</div>
+<div class="tbd" id="t12">
+<div class="tt">12 散会后怎么补一句</div>
+<div class="td">识别信号：会上有话没说完，散会就没机会了<br>改法：散会后当天补一条简短信息，把没说完的那句补上<br>记住一句：<b>散会后的十分钟，比会上多说的十分钟便宜。</b> 本节正文待展开。</div>
+</div>
+    </div>
+
+    <section id="prep">
+      <h2>会议前 60 秒清单</h2>
+      <p class="muted">进会前从上往下过一遍，有一条答不上来，就先把那条补上。</p>
+<div class="chk"><ul>
+<li><span class="bx"></span><span>今天这场会，我要说的一句话是什么？</span></li>
+<li><span class="bx"></span><span>这句话的依据是哪两条？</span></li>
+<li><span class="bx"></span><span>数据我核过没有？口径和时间点是什么？</span></li>
+<li><span class="bx"></span><span>对方可能从哪个角度质疑我？</span></li>
+<li><span class="bx"></span><span>被临时点名时，我的开场那一句怎么说？</span></li>
+<li><span class="bx"></span><span>有人替我说错话时，我怎么接？</span></li>
+<li><span class="bx"></span><span>我不想承诺的时间点，用哪句话挡？</span></li>
+<li><span class="bx"></span><span>我能接受的底线结果是什么？</span></li>
+<li><span class="bx"></span><span>散会之后我要补哪一句？</span></li>
+<li><span class="bx"></span><span>这次我只想说三句，剩下让他们问。</span></li>
+</ul></div>
+    </section>
+
+    <section id="test">
+      <h2>你在会上的发言卡在哪</h2>
+      <p class="muted">4 道题，看你是没准备就上场、稳得住，还是话太满。</p>
+      <div class="qwrap" id="qwrap"></div>
+    </section>
+
+    <section id="howto">
+      <div class="card">
+        <div class="kicker">交付与使用说明</div>
+        <p>这是一份单文件网页资料，拍下后自动发货一条链接，手机浏览器打开就能用，同一条链接可以反复使用。</p>
+        <p class="muted">整个页面是单个网页文件，提前存在手机里断网也能看；手机上先存好，下次直接点开。本资料为沟通参考，不构成专业心理评估、诊断或医疗建议。</p>
+      </div>
+      <div class="disc"><b>售后说明</b><br>虚拟资料，付款后不支持退款。页面打不开或显示异常，可在订单里联系售后处理。</div>
+    </section>
+
+    <div class="foot">
+      会上发言应急包 · 六个卡点十八句现成接法<br>
+      单文件网页，手机打开即用，断网也能看
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+var QZ = [["会上被突然点名，你的开场那一句通常是什么？",[["凭印象先说一句，说完再慢慢补。",[0,0,1],"A"],["先给结论，再补两条依据。",[2,2,2],"B"],["这事我全接了，散会前给你们结果。",[2,1,0],"C"]]],["对方当场质疑你的数据，你的本能反应是？",[["先绕开，说这个我回头看看。",[0,0,1],"A"],["先认下质疑，再把口径和数据摆出来。",[2,2,2],"B"],["这个数没问题，不接受质疑。",[2,1,0],"C"]]],["领导要你当场表态，你怎么说？",[["我……我先想想看。",[0,0,1],"A"],["方向上支持，前提是时间和人手到位。",[2,2,2],"B"],["支持，我这边无条件配合。",[2,1,0],"C"]]],["别人替你总结了一句你不想说的话，你？",[["算了，先不纠正，散会再说。",[0,0,1],"A"],["当场纠正：那句不是我说的。",[2,2,2],"B"],["顺着往下讲，把话都揽到自己身上。",[2,1,0],"C"]]]];
+var RES = [["A","没准备就上场型","你常在没有准备的时候被推上场，开口靠印象，补救靠运气。会议室里更耗人的不是难题，是空着手被点名。",4,[[["先写一句再进会","进会前写一句话：这场上我要说的那句是什么。写下来和没写差别很大。"],["把「我先说背景」换掉","开场就给结论或方向，背景放到后面再说。"],["接不住就明说","「这块我还没细看，半天后给你准数」比现场绕三句强。"],["准备三条依据","任何一段发言，准备三个能挡追问的数字或事实。"]]],"今天写一句话贴在你常坐的位置上：这场上我要说的那句。"],["B","稳得住型","你能接住大部分场面：有结论、有依据、也留得住边界。剩下要练的是把话再短一点。",4,[[["结论往前挪","结论永远放在开场，依据跟在后面，别倒着说。"],["表态带上条件","「我不反对，但需要两个前提」是分寸感更足的一句。"],["当场纠正一次","别人替你说的话偏了，当场用一句话收回来，别留到散会后。"],["质疑先认后补","先认下质疑再摆依据，节奏比抢着解释顺。"]]],"把你下一次发言写成三句：结论、依据、留给对方的接话口。"],["C","话太满型","你反应快、也敢当场拍板，这是优势。只是常常先把责任揽满，话一出口就没有退路，容易替别人扛下不属于你的事。",4,[[["表态加一个前提","「支持」后面加一句前提，就从空头变成了可控。"],["别替别人打包票","别人的事让对方自己说，你只说自己的那一半。"],["留一个「我确认后」","不确定的部分加三个字：我确认后给你答复。"],["纠正别人的总结","替别人说的话一旦更满，你没有机会解释，越早收回越好。"]]],"今天把一句「我全包」改成带前提的说法，说一遍听听。"]];
+var DIMS = [["prep","开口准备度"],["chase","接追问能力"],["say","表态分寸"]];
+var qi = 0, picks = [];
+
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.side a'));
+  var chips=[].slice.call(document.querySelectorAll('.mchip'));
+  function go(e){
+    var href=this.getAttribute('href');
+    if(!href||href.charAt(0)!=='#') return;
+    var el=document.querySelector(href);
+    if(!el) return;
+    e.preventDefault();
+    var top=el.getBoundingClientRect().top+window.pageYOffset-64;
+    window.scrollTo({top:top,behavior:'smooth'});
+  }
+  links.forEach(function(a){a.addEventListener('click',go);});
+  chips.forEach(function(a){a.addEventListener('click',go);});
+  var ids=links.map(function(a){return a.getAttribute('data-t');});
+  function highlight(){
+    var y=window.pageYOffset+90, cur='';
+    ids.forEach(function(id){
+      var el=document.getElementById(id);
+      if(el&&el.getBoundingClientRect().top+window.pageYOffset<=y) cur=id;
+    });
+    links.forEach(function(a){a.classList.toggle('open',a.getAttribute('data-t')===cur);});
+    chips.forEach(function(a){a.classList.toggle('on',a.getAttribute('data-c')===cur);});
+  }
+  var t=null;
+  window.addEventListener('scroll',function(){if(t)return;t=setTimeout(function(){t=null;highlight();},80);});
+  highlight();
+})();
+
+function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('on');clearTimeout(t._h);t._h=setTimeout(function(){t.classList.remove('on');},1500);}
+function copyText(txt){
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(function(){toast('已复制，去聊天框里粘上');},function(){fallback(txt);});
+  } else { fallback(txt); }
+}
+function fallback(txt){
+  var ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';
+  document.body.appendChild(ta);ta.select();
+  try{document.execCommand('copy');toast('已复制，去聊天框里粘上');}catch(e){toast('长按选中这段文字也可以复制');}
+  document.body.removeChild(ta);
+}
+document.addEventListener('click',function(e){
+  var line=e.target.closest('[data-copy]');
+  if(line){copyText(line.getAttribute('data-copy'));return;}
+  var opt=e.target.closest('.opt');
+  if(opt){pick(parseInt(opt.getAttribute('data-i'),10));return;}
+});
+
+function goSection(id){
+  var el=document.getElementById(id);
+  if(el){window.scrollTo(0,el.offsetTop-8);}
+}
+function showTest(){qi=0;picks=[];renderQ();goSection('test');}
+function renderQ(){
+  var wrap=document.getElementById('qwrap');
+  if(qi>=QZ.length){renderResult();return;}
+  var q=QZ[qi];
+  var h='<div class="qcnt">第 <b>'+(qi+1)+'</b> / '+QZ.length+' 题</div>';
+  h+='<div class="qbar"><i style="width:'+Math.round((qi+1)/QZ.length*100)+'%"></i></div>';
+  h+='<div class="qtext">'+q[0]+'</div><div class="opts">';
+  for(var i=0;i<q[1].length;i++){
+    h+='<button class="opt" data-i="'+i+'"><span class="k">'+'ABC'[i]+'</span><span>'+q[1][i][0]+'</span></button>';
+  }
+  h+='</div><button class="backbtn" onclick="goSection(\'kit\')">先返回上面看看十八句</button>';
+  wrap.innerHTML=h;
+}
+function pick(i){
+  var q=QZ[qi];
+  if(!q) return;
+  picks.push(q[1][i][1]);
+  picks[picks.length-1].push(q[1][i][2]);
+  qi++;
+  renderQ();
+}
+function renderResult(){
+  var sums=[0,0,0], counts={}, scoreOf={};
+  for(var i=0;i<picks.length;i++){
+    var s=picks[i];
+    for(var d=0;d<3;d++) sums[d]+=s[d];
+    var tag=s[3];
+    counts[tag]=(counts[tag]||0)+1;
+    scoreOf[tag]=(scoreOf[tag]||0)+s[0]+s[1]+s[2];
+  }
+  var band=null, best=-1, bestScore=-1;
+  for(var j=0;j<RES.length;j++){
+    var tag=RES[j][0];
+    var c=counts[tag]||0;
+    var sc=scoreOf[tag]||0;
+    if(c>best||(c===best&&sc>bestScore)){best=c;bestScore=sc;band=RES[j];}
+  }
+  var mx=QZ.length*2;
+  var h='<div class="res-hero" style="background:linear-gradient(135deg,'+band[2]+'22,'+band[2]+'0A)">';
+  h+='<div class="kicker" style="color:'+band[2]+'">会上发言 · 测试结果</div>';
+  h+='<div class="tname" style="color:'+band[2]+'">'+band[1]+'</div>';
+  h+='<div class="oneline" style="color:#4B5C58">'+band[3]+'</div>';
+  h+='</div>';
+  h+='<div class="bars"><div class="bt">三项得分（每项满分 '+mx+'）</div>';
+  for(var k=0;k<DIMS.length;k++){
+    var pct=Math.round(sums[k]/mx*100);
+    h+='<div class="barrow"><div class="bl"><span>'+DIMS[k][1]+'</span><span>'+sums[k]+' / '+mx+'</span></div>';
+    h+='<div class="bar"><i style="width:'+pct+'%"></i></div></div>';
+  }
+  var total=sums[0]+sums[1]+sums[2];
+  h+='<div class="scoretxt">总分 '+total+' / '+(mx*3)+' 分</div>';
+  h+='<div class="scorebar"><i style="width:'+Math.round(total/(mx*3)*100)+'%"></i></div>';
+  h+='</div>';
+  h+='<div class="res-list">';
+  for(var t=0;t<band[4][0].length;t++){
+    h+='<div class="res-item"><div class="ic" style="background:'+band[2]+'">'+(t+1)+'</div><div class="tx"><b>'+band[4][0][t][0]+'</b>'+band[4][0][t][1]+'</div></div>';
+  }
+  h+='</div>';
+  h+='<div class="disc"><b>今天能完成的一个小练习</b><br>'+band[5]+'</div>';
+  h+='<button class="rbtn p" onclick="showTest()">再测一次</button>';
+  h+='<button class="rbtn s" onclick="goSection(\'kit\')">回到十八句</button>';
+  document.getElementById('qwrap').innerHTML=h;
+}
+</script>
+</body>
+</html>
